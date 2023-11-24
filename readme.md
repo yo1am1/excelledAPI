@@ -8,4 +8,4 @@
 ![Lint](https://github.com/yo1am1/bookstoreAPI/actions/workflows/black.yaml/badge.svg?event=push)
 ![GitHub Latest Pre-Release)](https://img.shields.io/github/v/release/yo1am1/excelledAPI?include_prereleases&label=pre-release&logo=github)
 
-Welcome to the ExcelledAPI Django application! This project is a Django-based web service that provides [describe your project's purpose].
+Welcome to the ExcelledAPI Django application! This project is a Django-based web service based on Microsoft Excel functionality.
