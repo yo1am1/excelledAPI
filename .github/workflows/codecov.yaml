@@ -23,15 +23,19 @@ jobs:
           pip install requests
           pip install responses
           pip install django
+      - name: Django Setup
+        run: |
+          export DJANGO_SETTINGS_MODULE=excelledAPI.settings
+          python manage.py migrate
       - name: Run Tests
         run: |
-          DJANGO_SETTINGS_MODULE=excelledAPI.settings pytest --cov=./ --cov-report=xml
+          pytest --cov=./ --cov-report=xml
       - name: Upload coverage to Codecov
         uses: codecov/codecov-action@v3
         with:
           token: 63677f1d-31b2-43c3-b3a6-da73c01c4d09
           env_vars: OS,PYTHON
           fail_ci_if_error: true
-          flags: unittests
+          flags: pytest
           name: codecov-umbrella
           verbose: true
